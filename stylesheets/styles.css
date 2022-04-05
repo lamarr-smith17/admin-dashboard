@@ -10,19 +10,8 @@ body {
 
 div.main-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 250px 1fr 1fr;
   grid-template-areas: "sidebar header header" "sidebar main main";
-}
-div.searchbar {
-  display: grid;
-  grid-template-columns: 30px 1fr;
-}
-div.searchbar > #search {
-  grid-column: 2;
-}
-div.searchbar > img {
-  grid-column-start: 1;
-  grid-row-start: 1;
 }
 
 header.header {
@@ -32,6 +21,43 @@ header.header {
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
   padding-top: 20px;
+}
+header > .searchbar {
+  display: grid;
+  position: relative;
+  padding-left: 20px;
+  grid-template-columns: 30px 1fr 30px 1fr;
+  grid-column: span 2;
+}
+header > .searchbar > #search {
+  grid-column: 2;
+  height: 25px;
+  width: 500px;
+  border-radius: 20px;
+  border: 1px solid #808080;
+  outline: none;
+  text-indent: 10px;
+  transition: 0.2s;
+}
+header > .searchbar > #search:hover {
+  background-color: #D3D3D3;
+  transition: 0.2s;
+}
+header > .searchbar > img {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+header .searchbar > .user-profile-drop {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-start: 4;
+}
+header .searchbar > .user-profile-drop > .user-name {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  grid-column-start: 2;
+  grid-row-start: 1;
 }
 
 nav.sidebar {
