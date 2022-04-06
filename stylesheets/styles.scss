@@ -122,12 +122,72 @@ nav {
     &.sidebar{
         grid-area: sidebar;
         background-color: #9781e6;
+        display: grid;
+        justify-items: center;
+        grid-template-rows: 80px 1fr 1fr;
+    }
+    &> .sidebar-header {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        text-align: center;
+        padding-left: 20px;
+        gap: 10px;
+        &> img {
+            width: 40px;
+            color: #fefffe;
+        }
+        &> h1 {
+            font-size: 1.8em;
+            color: #fefffe;
+        }
+    }
+    &> .sidebar-links {
+        display: grid;
+        align-items: center;
+        &> li{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+    }
+    &> .sidebar-setting-links {
+        display: grid;
+        grid-auto-rows: 100px;
+        align-items: center;
+        &> li{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
     }
 }
 main {
     grid-area: main;
     background-color: #d2d6f9;
+    
 }
-button:hover {
-    cursor: pointer;
+button{
+    &.navBtnStyle{
+        border: none;
+        width: 100px;
+        height: 35px;
+        font-size: 1.2em;
+        color: #fefffe;
+        background-color: transparent;
+        transition: .2s;
+        &:hover{
+            color: #e9d4f1;
+            transform: scale(1.1);
+            transition: .2s;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+img {
+    &.navIcons {
+        width: 40px;
+    }
 }
