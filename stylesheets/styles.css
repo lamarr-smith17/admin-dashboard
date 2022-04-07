@@ -5,15 +5,21 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 li {
   list-style-type: none;
 }
+li.trending-items {
+  display: flex;
+  gap: 15px;
+}
 
 div.main-container {
   display: grid;
+  height: 100vh;
   grid-template-columns: 250px 1fr 1fr;
   grid-template-areas: "sidebar header header" "sidebar main main";
 }
@@ -23,6 +29,7 @@ div.card-div {
   position: relative;
   max-height: 200px;
   min-height: 100px;
+  min-width: 200px;
   padding: 15px;
   gap: 80px;
   border-left: 3px solid #f3d8ab;
@@ -64,9 +71,13 @@ div.trending-box {
   border-radius: 20px;
   padding: 20px;
 }
+div.trending-box > .trending-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
 
 header {
-  height: 200px;
   border-bottom: 2px solid #808080;
 }
 header.header {
@@ -136,7 +147,6 @@ header > .user-hub > .user-greet > section {
 header > .user-hub > .user-greet > img {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
 }
 header > .header-links {
   justify-self: end;
@@ -181,7 +191,6 @@ nav > .sidebar-header {
 }
 nav > .sidebar-header > img {
   width: 40px;
-  color: #fefffe;
 }
 nav > .sidebar-header > h1 {
   font-size: 1.8em;
@@ -198,7 +207,7 @@ nav > .sidebar-links > li {
 }
 nav > .sidebar-setting-links {
   display: grid;
-  grid-auto-rows: 100px;
+  grid-auto-rows: 70px;
   align-items: center;
 }
 nav > .sidebar-setting-links > li {
@@ -218,7 +227,7 @@ main > .project-container {
   position: relative;
   grid-template-columns: repeat(2, minmax(250px, 600px));
   grid-template-rows: repeat(auto-fit, 1fr);
-  gap: 15px;
+  gap: 25px;
   padding: 40px 20px 20px 20px;
 }
 main > .project-container > h2 {
@@ -227,9 +236,21 @@ main > .project-container > h2 {
   top: 5px;
 }
 main > .main-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
   grid-column: 2;
-  padding-top: 20px;
+  position: relative;
+  padding-top: 40px;
   padding-right: 20px;
+}
+main > .main-sidebar > #announcement-header {
+  position: absolute;
+  top: 5px;
+}
+main > .main-sidebar > #trending-header {
+  position: absolute;
+  top: 290px;
 }
 
 button.navBtnStyle {
@@ -246,6 +267,11 @@ button.navBtnStyle:hover {
   transform: scale(1.1);
   transition: 0.2s;
 }
+button.nameBtn {
+  border: none;
+  background-color: transparent;
+  font-size: 1em;
+}
 button:hover {
   cursor: pointer;
 }
@@ -258,6 +284,9 @@ img.card-img {
   height: 100%;
   border-radius: 5%;
   flex-shrink: 1;
+}
+img.imgRoundBorder {
+  border-radius: 50%;
 }
 
 p.card-text {

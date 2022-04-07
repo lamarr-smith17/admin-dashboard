@@ -16,7 +16,7 @@
                 <div class="user-profile-drop">
                     <div class="user-name">
                         <img src="./imgs/notifications_active_black_24dp.svg" alt="Notification Bell" width="50px">
-                        <img id="coffee-icon" src="./imgs/jarek-ceborski-IhqDpFz7I8Q-unsplash.jpg" alt="Glass cup of a latte" width="50px" height="50px">
+                        <img id="coffee-icon" src="./imgs/jarek-ceborski-IhqDpFz7I8Q-unsplash.jpg" alt="Glass cup of a latte" width="50px" height="50px" class="imgRoundBorder">
                         <p><strong>LaMarr Smith</strong></p>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
             
             <div class="user-hub">
                 <div class="user-greet">
-                    <img src="./imgs/jarek-ceborski-IhqDpFz7I8Q-unsplash.jpg" alt="Glass cup of a latte">
+                    <img src="./imgs/jarek-ceborski-IhqDpFz7I8Q-unsplash.jpg" alt="Glass cup of a latte" class="imgRoundBorder">
                     <section>
                         <p><strong>Hi there,</strong></p>
                         <h2>LaMarr Smith (@lamarr)</h2>
@@ -152,7 +152,7 @@
                 </div>
                 <div class="google-page card-div">
                     <div class="card-info">
-                        <h2>Google Homepage Project</h2>
+                        <h2>Google Project</h2>
                         <p class="card-text">A recreation of the Google homepage. This was pretty simple and helped me understand CSS better early on.</p>
                         <div class="links-to-pages">
                             <p class="link-p"><a href="https://github.com/lamarr-smith17/google-homepage" target="_blank">Github</a></p>
@@ -163,7 +163,7 @@
                 </div>
             </div>
             <div class="main-sidebar">
-                <h2>Annoucements</h2>
+                <h2 id="announcement-header">Annoucements</h2>
                 <div class="announcements-box">
                     <div class="announce-1">
                         <h2>Best Coffee Type</h2>
@@ -177,30 +177,37 @@
                         <h2>Site Maintenance</h2>
                         <p>Yea, we'll get to that eventually!</p>
                     </div>
-                    <!-- <img src="./imgs/cutecoffee.gif" alt="Coffe gif" width="50px" height="50px"> -->
                 </div>
-                <h2>Trending</h2>
+                <h2 id="trending-header">Trending</h2>
                 <div class="trending-box">
                     <ul class="trending-list">
-                        <li>
-                            <p>@jasRiceLover</p>
-                            <img src="./imgs/jasminerice.jpg" alt="Picutre of jasmine rice" width="50px" height="50px">
-                            <button type="button" class="nameBtn">Jasmine Rice Lover</button>
+                        <li class="trending-items">
+                            <img src="./imgs/jasminerice.jpg" alt="Picutre of jasmine rice" width="50px" height="50px" class="imgRoundBorder">
+                            <div class="trending-user-holder">
+                                <p>@jasmine</p>
+                                <button type="button" class="nameBtn">Jasmine Rice Lover</button>
+                            </div>                         
                         </li>
-                        <li>
-                            <p>@guacman</p>
-                            <img src="./imgs/tessa-rampersad-9ND-qkGs1_8-unsplash.jpg" alt="Picture of guacamole" width="50px" height="50px">
-                            <button type="button">Guacman</button>
+                        <li class="trending-items">
+                            <img src="./imgs/tessa-rampersad-9ND-qkGs1_8-unsplash.jpg" alt="Picture of guacamole" width="50px" height="50px" class="imgRoundBorder">
+                            <div class="trending-user-holder">
+                                <p>@guac</p>
+                                <button type="button" class="nameBtn">Guacman</button>
+                            </div>
                         </li>
-                        <li>
-                            <p>@coffeeSnob</p>
-                            <img src="./imgs/nathan-dumlao-nBJHO6wmRWw-unsplash.jpg" alt="Picture of coffee" width="50px" height="50px">
-                            <button type="button">Coffee Snob</button>
+                        <li class="trending-items">
+                            <img src="./imgs/nathan-dumlao-nBJHO6wmRWw-unsplash.jpg" alt="Picture of coffee" width="50px" height="50px" class="imgRoundBorder">
+                            <div class="trending-user-holder">
+                                <p>@coffee</p>
+                                <button type="button" class="nameBtn">Coffee Snob</button>
+                            </div>                          
                         </li>
-                        <li>
-                            <p>@steakEnthusiast</p>
-                            <img src="./imgs/chad-montano-M0lUxgLnlfk-unsplash.jpg" alt="Picture of steak" width="50px" height="50px">
-                            <button type="button">Steak Enthusiast</button>
+                        <li class="trending-items">
+                            <img src="./imgs/chad-montano-M0lUxgLnlfk-unsplash.jpg" alt="Picture of steak" width="50px" height="50px" class="imgRoundBorder">
+                            <div class="trending-user-holder">
+                                <p>@steak</p>
+                                <button type="button" class="nameBtn">Steak Enthusiast</button>
+                            </div>                          
                         </li>
                     </ul>
                 </div>
